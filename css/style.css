@@ -420,6 +420,7 @@ span, a, a:hover {
   .creative .svg svg {
     fill: var(--primary);
     width: 101%; 
+    margin-bottom: 4px;
   }
 
 #video-background {
