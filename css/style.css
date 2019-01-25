@@ -1,17 +1,18 @@
 /*-----------------------------------------------------------------------------------
 
  Theme Name: Kemo
+ Theme Editor: ENREDA;
  Theme URI: http://
  Description: The Multi-Purpose Onepage Template
  Author: design_story
  Author URI: http://themeforest.net/user/design_story
- Version: 1.0.1
+ Version: 2.0.1
 
 -----------------------------------------------------------------------------------*/
 /* ----------------------------------------------------------------
 
  == Table Of Content
-
+ 00 Colors
  01 Basics
  02 Buttons
  03 Navbar
@@ -29,9 +30,20 @@
  15 Contact
  16 Footer
  17 Responsive
+ 18 Images
  
 
 ---------------------------------------------------------------- */
+/* ----------------------------------------------------------------
+     [ 00 Colors ]
+-----------------------------------------------------------------*/
+:root {
+  --primary:      #73A161;
+  --primary-light:  #84AE81;
+  --primary-dark:   #739174;
+}
+
+
 /* ----------------------------------------------------------------
      [ 01 Start Basics ]
 -----------------------------------------------------------------*/
@@ -57,13 +69,19 @@ p {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.8;
-  margin: 0; }
+  margin: 0;
+  cursor: default;
+}
 
 h1, h2, h3, h4 {
-  font-weight: 700; }
+  font-weight: 700;
+  cursor: default;
+}
 
 h5, h6 {
-  font-weight: 600; }
+  font-weight: 600; 
+  cursor: default;
+}
 
 img {
   width: 100%;
@@ -80,7 +98,7 @@ span, a, a:hover {
 .section-head {
   margin-bottom: 80px; }
   .section-head h6 {
-    color: #0495d6;
+    color: var(--primary);
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 4px; }
@@ -91,7 +109,7 @@ span, a, a:hover {
     padding-bottom: 15px;
     position: relative; }
     .section-head h4:after {
-      background-color: #0495d6;
+      background-color: var(--primary);
       bottom: 0;
       content: '';
       height: 2px;
@@ -104,6 +122,9 @@ span, a, a:hover {
 
 .bg-gray {
   background: #f7f7f7; }
+.bg-primary {
+  background: var(--primary) !important;
+}
 
 .o-hidden {
   overflow: hidden; }
@@ -139,7 +160,7 @@ span, a, a:hover {
   background-size: auto; }
 
 .sub-title {
-  color: #0495d6;
+  color: var(--primary);
   font-size: 15px;
   font-weight: 400;
   margin-bottom: 10px; }
@@ -190,7 +211,7 @@ span, a, a:hover {
 
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-  background: #0495d6; }
+  background: var(--primary); }
 
 /* ----------------------------------------------------------------
      [ End Basics ]
@@ -199,8 +220,9 @@ span, a, a:hover {
      [ 02 Start Buttons ]
 -----------------------------------------------------------------*/
 .butn {
-  background: #fff;
-  border-radius: 30px;
+  background: var(--primary);
+  color: #fff;
+  /*border-radius: 30px;*/
   border: 1px solid transparent;
   box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -216,8 +238,9 @@ span, a, a:hover {
     position: relative;
     transition-delay: 0s;
     z-index: 2; }
-  .butn:before, .butn:after {
+  .butn:before {
     background: #fff;
+    color: var(--primary);
     content: '';
     height: 100%;
     left: 0;
@@ -227,11 +250,7 @@ span, a, a:hover {
     transition: width 0.4s;
     width: 0;
     z-index: 1; }
-  .butn:after {
-    background: #fff;
-    opacity: 1;
-    transition-delay: 0s; }
-  .butn:hover:before, .butn:hover:after {
+  .butn:hover:before {
     width: 100%; }
   .butn:hover:after {
     transition-delay: .2s; }
@@ -239,27 +258,27 @@ span, a, a:hover {
     transition-delay: .2s; }
 
 .butn-bord {
-  border-color: #0495d6; }
-  .butn-bord:before, .butn-bord:after {
-    background: #0495d6; }
+  border-color: var(--primary); }
+  .butn-bord:before {
+    background: var(--primary); }
   .butn-bord:hover span {
     color: #fff; }
 
 .butn-bg {
-  background: #0495d6;
-  border-color: #0495d6;
+  background: var(--primary);
+  border-color: var(--primary);
   color: #fff; }
   .butn-bg:hover span {
-    color: #0495d6; }
+    color: var(--primary); }
 
 .butn-light {
   background: #fff; }
-  .butn-light:before, .butn-light:after {
-    background: #0495d6; }
+  .butn-light:before {
+    background: var(--primary); }
   .butn-light:hover span {
     color: #fff; }
   .butn-light span {
-    color: #0495d6; }
+    color: var(--primary); }
 
 /* ----------------------------------------------------------------
      [ End Buttons ]
@@ -274,9 +293,10 @@ span, a, a:hover {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 9; }
+  z-index: 999; }
   .navbar .icon-bar {
-    color: #fff; }
+    color: #fff; 
+  }
   .navbar .navbar-nav .nav-link {
     color: #eee;
     font-size: 13px;
@@ -285,9 +305,11 @@ span, a, a:hover {
     margin: 15px 5px;
     transition: all .4s; }
     .navbar .navbar-nav .nav-link:hover {
-      color: #0495d6; }
+      color: var(--primary-light); 
+    }
   .navbar .navbar-nav .active {
-    color: #0495d6 !important; }
+    color: var(--primary) !important; 
+  }
 
 .nav-scroll {
   background: #fff;
@@ -356,7 +378,7 @@ span, a, a:hover {
         .header .caption p span:last-child:after {
           display: none; }
       .header .caption p span:after {
-        background: #0495d6;
+        background: var(--primary);
         border-radius: 50%;
         content: '';
         height: 7px;
@@ -396,8 +418,9 @@ span, a, a:hover {
   width: 100%;
   z-index: 2; }
   .creative .svg svg {
-    fill: #0495d6;
-    width: 101%; }
+    fill: var(--primary);
+    width: 101%; 
+  }
 
 #video-background {
   height: 100%;
@@ -414,7 +437,7 @@ span, a, a:hover {
     font-weight: 300;
     margin-bottom: 10px; }
     .page-header h6 a:hover {
-      color: #0495d6; }
+      color: var(--primary); }
     .page-header h6 i {
       font-size: 10px;
       margin: 0 15px; }
@@ -428,8 +451,9 @@ span, a, a:hover {
 /* ----------------------------------------------------------------
      [ 05 Start Hero ]
 -----------------------------------------------------------------*/
+
 .call-to-action {
-  background-color: #0495d6;
+  background-color: var(--primary);
   color: #FFF;
   padding: 50px 0; }
   .call-to-action h2 {
@@ -473,7 +497,7 @@ span, a, a:hover {
       width: 80px; }
       .hero .item .back-circle .front-circle {
         -webkit-transition: all .2s linear;
-        background: #0495d6;
+        background: var(--primary);
         border-radius: 500px;
         height: 66px;
         left: 6px;
@@ -486,12 +510,12 @@ span, a, a:hover {
       -webkit-transform: translateY(-7px);
       transform: translateY(-7px); }
       .hero .item:hover .more {
-        color: #0495d6 !important;
+        color: var(--primary) !important;
         padding-left: 10px;
         padding-right: 10px; }
     .hero .item .more {
       border-bottom: 1px solid;
-      color: #0495d6;
+      color: var(--primary);
       display: inline-block;
       padding: 5px;
       transition: all .5s; }
@@ -525,7 +549,7 @@ span, a, a:hover {
 .video-intro .vid-butn {
   background: #fff;
   border-radius: 50%;
-  color: #0495d6;
+  color: var(--primary);
   font-size: 18px;
   height: 60px;
   line-height: 60px;
@@ -548,23 +572,40 @@ span, a, a:hover {
   .services .serv-item:hover {
     background-color: #fff;
     border-radius: 5px;
-    border: none;
+    border: 1px solid transparent;
     box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.2); }
     .services .serv-item:hover .icon {
-      background: #0495d6;
-      color: #fff; }
+      background: var(--primary);
+      color: #fff; 
+    }
   .services .serv-item .icon {
     border-radius: 50%;
-    color: #0495d6;
+    color: var(--primary);
     font-size: 35px;
     height: 70px;
     line-height: 70px;
     margin-bottom: 25px;
     transition: all 0.3s ease-in-out;
-    width: 70px; }
+    width: 70px; 
+  }
+    .services .serv-item.bg-primary .icon {
+      color: #fff;
+    }
+    .services .serv-item.bg-primary:hover .icon {
+      background: #fff;
+      color: var(--primary);
+    }
   .services .serv-item h6 {
     font-weight: 500;
-    margin-bottom: 20px; }
+    margin-bottom: 20px; 
+  }
+  .services .serv-item.bg-primary h6 {
+    color: #fff;
+  }
+  .services .serv-item.bg-primary p {
+    color: #fff;
+    color: rgba(255,255,255,0.66);
+  }
 
 /* ----------------------------------------------------------------
      [ End Services ]
@@ -585,12 +626,12 @@ span, a, a:hover {
   padding: 8px 20px;
   transition: all 0.3s ease 0s; }
   .works .filtering span:hover {
-    background: #0495d6;
-    background: linear-gradient(to right, #0495d6, #1f6ea9);
+    background: var(--primary);
+    background: linear-gradient(to right, var(--primary), #1f6ea9);
     color: #fff; }
 .works .filtering .active {
-  background: #0495d6;
-  background: linear-gradient(to right, #0495d6, #1f6ea9);
+  background: var(--primary);
+  background: linear-gradient(to right, var(--primary), #1f6ea9);
   box-shadow: 0px 8px 30px -5px rgba(0, 0, 0, 0.2);
   color: #fff; }
 .works .gallery {
@@ -654,7 +695,7 @@ span, a, a:hover {
      [ 09 Start Numbers ]
 -----------------------------------------------------------------*/
 .numbers .icon {
-  color: #0495d6;
+  color: var(--primary);
   font-size: 45px;
   margin-bottom: 20px; }
 .numbers h3 {
@@ -669,7 +710,7 @@ span, a, a:hover {
   font-size: 60px;
   margin-bottom: 10px; }
 .states .sub-title {
-  color: #0495d6; }
+  color: var(--primary); }
 .states h5 {
   font-weight: 200;
   line-height: 1.5;
@@ -677,7 +718,7 @@ span, a, a:hover {
   padding-bottom: 30px;
   position: relative; }
   .states h5:after {
-    background: #0495d6;
+    background: var(--primary);
     bottom: 0;
     content: '';
     height: 1px;
@@ -739,7 +780,7 @@ span, a, a:hover {
     white-space: nowrap;
     width: 116px; }
     .testimonials-grid .item .rating:before {
-      color: #0495d6;
+      color: var(--primary);
       content: "\f005\f005\f005\f005\f005";
       font-family: 'FontAwesome',sans-serif;
       font-size: 15px;
@@ -794,7 +835,7 @@ span, a, a:hover {
     position: relative; }
     .team .item .team-img:after {
       background-color: rgba(0, 0, 0, 0.8);
-      background: #0495d6;
+      background: var(--primary);
       border-top: 2px solid #fff;
       content: '';
       height: 25%;
@@ -918,7 +959,7 @@ span, a, a:hover {
       font-weight: 500;
       position: absolute; }
       .blog .item .post-img .tag a {
-        background-color: #0495d6;
+        background-color: var(--primary);
         box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
         font-size: 12px;
         padding: 8px 12px; }
@@ -959,9 +1000,15 @@ span, a, a:hover {
      [ 14 Start Clients ]
 -----------------------------------------------------------------*/
 .clients a {
-  opacity: .8; }
+  opacity: .8; 
+  filter: grayscale(100);
+  transition: all .2s;
+}
   .clients a:hover {
-    opacity: 1; }
+    opacity: 1; 
+    filter: grayscale(0);
+    transition: all .5s;
+  }
 
 /* ----------------------------------------------------------------
      [ End Blog ]
@@ -1013,6 +1060,31 @@ span, a, a:hover {
   .page-map #ieatmaps {
     height: 400px; }
 
+#contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.form-control, .form-group label {
+  font-size: 14px;
+  color: #7f7f7f;
+}
+  .form-group label {
+    vertical-align: middle;
+  }
+  .custom-control-input:focus~.custom-control-label::before {
+    box-shadow: none;
+  }
+  .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background: var(--primary);
+  }
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem var(--primary-light);
+}
+textarea.form-control {
+  min-height: 150px;
+}
+
 /* ----------------------------------------------------------------
      [ End Contact ]
 -----------------------------------------------------------------*/
@@ -1040,7 +1112,7 @@ span, a, a:hover {
     letter-spacing: 1px;
     margin-bottom: 15px; }
     .footer .info h6 i {
-      color: #0495d6; }
+      color: var(--primary); }
   .footer .info p {
     margin-bottom: 30px; }
   .footer .info span {
@@ -1050,7 +1122,7 @@ span, a, a:hover {
     font-size: 11px;
     margin-right: 15px; }
     .footer .info .icon:hover {
-      color: #0495d6; }
+      color: var(--primary); }
   .footer .footer-widget-list {
     margin: 0; }
     .footer .footer-widget-list li {
@@ -1073,9 +1145,9 @@ span, a, a:hover {
           -webkit-transition-duration: .3s;
           transition-duration: .3s; }
         .footer .footer-widget-list li a:hover {
-          color: #0495d6; }
+          color: var(--primary); }
           .footer .footer-widget-list li a:hover:before {
-            color: #0495d6; }
+            color: var(--primary); }
   .footer .las-post .thum {
     float: left;
     height: 50px;
@@ -1100,7 +1172,8 @@ span, a, a:hover {
     padding: 7px 15px;
     text-transform: uppercase; }
     .footer .tags span:hover {
-      background-color: #0495d6; }
+      /*background-color: var(--primary);*/
+    }
   .footer .sub-footer {
     background-color: #131313;
     margin-top: 50px;
@@ -1156,7 +1229,7 @@ span, a, a:hover {
   .nav-scroll .navbar-collapse .nav-link {
     color: #fff !important; }
   .nav-scroll .navbar-collapse .active {
-    color: #0495d6 !important; }
+    color: var(--primary) !important; }
 
   .header {
     background-attachment: scroll !important;
@@ -1220,6 +1293,12 @@ span, a, a:hover {
 
   .works .filtering span {
     margin: 0 0 5px; } }
+
+
+.owl-carousel-lynx > a {
+  width: 135px;
+  margin: 0px 30px;
+}
 /* ----------------------------------------------------------------
      [ The End ]
 -----------------------------------------------------------------*/
