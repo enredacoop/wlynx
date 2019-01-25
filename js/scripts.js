@@ -41,12 +41,12 @@ $(function() {
         if(bodyScroll > 100){
 
             navbar.addClass("nav-scroll");
-            logo.attr('src', 'img/logo-dark.png');
+            logo.attr('src', 'img/Lynx-imagotipo.png');
 
         }else{
 
             navbar.removeClass("nav-scroll");
-            logo.attr('src', 'img/logo-light.png');
+            logo.attr('src', 'img/Lynx-imagotipo-white.png');
         }
     });
 
@@ -262,7 +262,9 @@ $(window).on("load",function (){
     });
 
 
-        //yt player
+    //yt player
+    /* lo desactivamos porque no se utiliza */
+    /*
     $('#video-background').YTPlayer({
         videoId: 'CzWS9UMMCNA',
         fitToBackground: false,
@@ -281,6 +283,7 @@ $(window).on("load",function (){
             origin: window.location.origin
         }
     });
+    */
 
 });
 

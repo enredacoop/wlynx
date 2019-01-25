@@ -52,7 +52,7 @@
 
             <!-- Logo -->
             <a class="logo" href="#">
-                <img src="img/logo-light.png" alt="logo">          
+                <img src="img/Lynx-imagotipo-white.png" alt="logo">          
             </a>
 
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -530,7 +530,6 @@
 
         <!-- =====================================
         ==== Start Contact -->
-
         <section id="contact" class="page-contact section-padding" data-scroll-index="6">
             <div class="container">
                 <div class="row">
@@ -543,17 +542,20 @@
 
                     <div class="col-sm text-center">
 
-                        <div id="alert-ko" class="alert alert-danger alert-dismissible d-none" role="alert">
+                        <div id="alert-ko" class="alert alert-form alert-danger alert-dismissible d-none" role="alert">
                             No se ha podido enviar el formulario de contacto en estos momentos. Por favor, inténtelo más tarde. Disculpe las molestias.
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
                         </div>
-                        <div id="alert-ok" class="alert alert-success alert-dismissible d-none" role="alert">
+                        <div id="alert-ok" class="alert alert-form alert-success alert-dismissible d-none" role="alert">
                             Se ha enviado el formulario de contacto correctamente. Le responderemos lo antes posible. Gracias.
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
                         </div>
-                        <form id="contact-form" action="" onsubmit="sendEmail(); return false;">
+                        <form id="contact-form" action="#contact" onsubmit="sendEmail(); return false;">
                             <div class="form-group">
                                 <input type="text" id="form-name" placeholder="Escribe tu nombre" class="form-control c-square c-theme input-lg" required />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="form-organizacion" placeholder="Escribe el nombre de tu organización" class="form-control c-square c-theme input-lg" required />
                             </div>
                             <div class="form-group">
                                 <input type="email" id="form-email" placeholder="Escribe tu email" class="form-control c-square c-theme input-lg" required />
@@ -562,7 +564,7 @@
                                 <input type="text" id="form-phone" placeholder="Escribe tu teléfono" class="form-control c-square c-theme input-lg" required />
                             </div>
                             <div class="form-group">
-                                <textarea rows="8" id="form-message" placeholder="Motivo de consulta..." class="form-control c-theme c-square input-lg" required></textarea>
+                                <textarea rows="8" id="form-message" placeholder="Motivo de consulta" class="form-control c-theme c-square input-lg" required></textarea>
                             </div>
                             <div class="form-group">
                                 <div class="custom-control custom-checkbox text-left">
@@ -577,7 +579,6 @@
                 </div>
             </div>
         </section>
-
         <!-- End Contact ====
         ======================================= -->
 
@@ -593,7 +594,7 @@
                         <div class="info mb-md50">
                             <!-- Logo -->
                             <a class="logo" href="#">
-                                <img src="img/logo-light.png" alt="logo">
+                                <img src="img/Lynx-imagotipo-white.png" alt="logo">
                             </a>
                             <h6></h6>
                             <p>
@@ -793,7 +794,7 @@
         <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
         <script type="text/javascript">
         (function(){
-          emailjs.init("user_0t6pKfOxfc5URBHNxCPaUkkk");
+          emailjs.init("user_1VeOZwBjuyCrbreaj6hkL");
         })();
         </script>
         <script type="text/javascript" src="js/email.js"></script>

@@ -331,7 +331,7 @@ span, a, a:hover {
 
 .logo {
   padding: 15px 5px;
-  width: 80px; }
+  width: 200px; }
 
 /* ----------------------------------------------------------------
      [ End Navbar ]
@@ -1060,10 +1060,13 @@ span, a, a:hover {
   .page-map #ieatmaps {
     height: 400px; }
 
-#contact-form {
+#contact-form, .alert-form {
   max-width: 500px;
   margin: 0 auto;
 }
+  .alert-form {
+    margin-bottom: 30px;
+  }
 .form-control, .form-group label {
   font-size: 14px;
   color: #7f7f7f;
