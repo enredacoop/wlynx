@@ -1243,6 +1243,9 @@ textarea.form-control {
     .header .caption h1 {
       font-size: 45px;
       line-height: 1.4; }
+    .header .svg {
+      display: none;
+    }
 
   .price .pricing-tables {
     padding: 0; }
