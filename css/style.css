@@ -341,7 +341,6 @@ span, a, a:hover {
 -----------------------------------------------------------------*/
 .header {
   min-height: 100vh;
-  padding-bottom: 50px;
   overflow: hidden; }
   .header .caption .o-hidden {
     display: inline-block; }
