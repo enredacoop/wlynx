@@ -1106,10 +1106,20 @@ textarea.form-control {
     letter-spacing: 2px;
     margin-bottom: 30px;
     padding-bottom: 10px;
-    text-transform: uppercase; }
+    text-transform: uppercase; 
+  }
   .footer .info .logo {
     margin-bottom: 10px;
-    padding: 0; }
+    padding: 0; 
+    opacity: 0.66;
+    -webkit-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+  }
+    .footer .info .logo:hover {
+      opacity: 1;
+      -webkit-transition: all ease-in-out .3s;
+      transition: all ease-in-out .3s;
+    }
   .footer .info h6 {
     font-size: 12px;
     font-weight: 300;
@@ -1174,7 +1184,8 @@ textarea.form-control {
     margin-bottom: 6px;
     margin-right: 2px;
     padding: 7px 15px;
-    text-transform: uppercase; }
+    /*text-transform: uppercase;*/
+  }
     .footer .tags span:hover {
       /*background-color: var(--primary);*/
     }
