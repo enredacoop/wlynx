@@ -1317,6 +1317,38 @@ textarea.form-control {
   width: 135px;
   margin: 0px 30px;
 }
+
+.modal-content{
+  color: #3f444a;
+  font-size: 15px;
+}
+.modal-header{
+  padding: 20px 20px 15px 20px;
+}
+
+.modal-title{
+  font-weight: 500;
+  font-size: 20px;
+  color: #2f3237;
+}
+
+.modal-body{
+
+}
+
+.modal-body h6{
+  padding:20px 0 20px 0;
+  font-size: 20px;
+  color: #2f3237;
+}
+
+.modal-body ul{
+  padding: 10px 10px 10px 10px;
+}
+
+.modal-body ul li{
+  padding: 7px 0 7px 0;
+}
 /* ----------------------------------------------------------------
      [ The End ]
 -----------------------------------------------------------------*/
