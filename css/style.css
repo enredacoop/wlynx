@@ -31,6 +31,8 @@
  16 Footer
  17 Responsive
  18 Images
+ 19 Margins
+ 20 Tables
  
 
 ---------------------------------------------------------------- */
@@ -38,9 +40,10 @@
      [ 00 Colors ]
 -----------------------------------------------------------------*/
 :root {
-  --primary:      #73A161;
+  --primary:        #73A161;
   --primary-light:  #84AE81;
   --primary-dark:   #739174;
+  --gray:           #f7f7f7;
 }
 
 
@@ -570,14 +573,26 @@ span, a, a:hover {
   padding: 50px;
   text-align: center;
   transition: all 0.3s ease-in-out; }
-  .services .serv-item:hover {
+  .services .serv-item:hover,
+  .services .serv-item.bg-primary .serv-item:hover {
     background-color: #fff;
     border-radius: 5px;
     border: 1px solid transparent;
-    box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.2); }
-    .services .serv-item:hover .icon {
+    box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.2); 
+  }
+    .services .serv-item:hover .table-small tbody {
+      background: var(--gray);
+    }
+    .services .serv-item:hover .icon,
+    .services .serv-item.bg-primary:hover .serv-item:hover .icon {
       background: var(--primary);
       color: #fff; 
+    }
+    .services .serv-item.bg-primary:hover .serv-item:hover h6 {
+      color: #222;
+    }
+    .services .serv-item.bg-primary:hover .serv-item:hover p {
+      color: #7f7f7f;
     }
   .services .serv-item .icon {
     border-radius: 50%;
@@ -596,6 +611,10 @@ span, a, a:hover {
       background: #fff;
       color: var(--primary);
     }
+    .services .serv-item.bg-primary:hover .serv-item .icon {
+      background: inherit;
+      color: inherit;
+    }
   .services .serv-item h6 {
     font-weight: 500;
     margin-bottom: 20px; 
@@ -608,6 +627,34 @@ span, a, a:hover {
     color: rgba(255,255,255,0.66);
   }
 
+.services .serv-item.bg-primary, .services .serv-item.bg-primary p {
+  color: #fff;
+}
+
+.conjunto .conjunto-icon {
+  background: #d7d7d7;
+  padding: 30px;
+}
+  .conjunto .conjunto-icon img {
+    width: 100px;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    }
+.conjunto .conjunto-title {
+  background: var(--primary);
+  color: #fff;
+  padding: 20px;
+  position: relative;
+  left: -20px;
+}
+.conjunto.conjunto-left .conjunto-title {
+  left: -20px;
+  right: initial;
+}
+.conjunto.conjunto-right .conjunto-title {
+  right: -20px;
+  left: initial;
+}
 /* ----------------------------------------------------------------
      [ End Services ]
 -----------------------------------------------------------------*/
@@ -1349,6 +1396,71 @@ textarea.form-control {
 .modal-body ul li{
   padding: 7px 0 7px 0;
 }
+
+/* ----------------------------------------------------------------
+   [ End Responsive ]
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+   [ 18 Images ]
+-----------------------------------------------------------------*/
+.img-caracteristicas > img {
+  max-width: 400px;
+}
+.img-caracteristicas-2 > img {
+  max-width: 600px;
+}
+/* ----------------------------------------------------------------
+   [ 18 End Images ]
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+   [ 19 Margins ]
+-----------------------------------------------------------------*/
+.mbt-30 {
+  margin: 30px 0px;
+}
+.mbt-75 {
+  margin: 75px 0px;
+}
+/* ----------------------------------------------------------------
+   [ 19 End Margins ]
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+   [ 20 Tables ]
+-----------------------------------------------------------------*/
+.table-center {
+  margin: 0 auto;
+}
+  .table-center.mbt-30 {
+    margin: 30px auto;
+  }
+.table-small {
+  min-width: 350px;
+}
+  .table-small thead {
+    background: var(--primary);
+  }
+    .table-small thead th {
+      padding: 10px 15px;
+      color: #fff;
+    }
+  .table-small tbody {
+    background: #fff;
+  }
+    .table-small tbody td {
+      padding: 10px 15px;
+    }
+    .table-small tbody tr:first-child td {
+      padding-top: 20px;
+    }
+    .table-small tbody tr:last-child td {
+      padding-bottom: 20px;
+    }
+
+
 /* ----------------------------------------------------------------
      [ The End ]
 -----------------------------------------------------------------*/
